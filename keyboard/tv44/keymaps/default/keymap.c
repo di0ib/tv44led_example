@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = { /* Qwerty */
   {KC_ESC,     KC_Q,       KC_W,       KC_E,        KC_R,     KC_T,    KC_Y,     KC_U,       KC_I,       KC_O,       KC_P,       KC_BSPC},
   {FUNC(0),    KC_A,       KC_S,       KC_D,        KC_F,     KC_G,    KC_H,     KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT},
-  {KC_LSFT,    KC_Z,       KC_X,       KC_C,        KC_V,     KC_B,    KC_N,     KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    FUNC(9)},
+  {KC_LSFT,    KC_Z,       KC_X,       KC_C,        KC_V,     KC_B,    KC_N,     KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    FUNC(3)},
   {KC_LCTL,    KC_LGUI,    KC_LALT,    FUNC(1),     XXXXXXX,  XXXXXXX, XXXXXXX,  FUNC(2),    KC_RALT,    KC_APP,     XXXXXXX,    KC_RCTL}
 },
 
@@ -74,6 +74,7 @@ const uint16_t PROGMEM fn_actions[] = {
   [0]  = ACTION_LAYER_TAP_KEY(_TB, KC_TAB),
   [1]  = ACTION_LAYER_TAP_KEY(_RAISE, KC_SPC),
   [2]  = ACTION_LAYER_TAP_KEY(_LOWER, KC_SPC),
+  [3]  = ACTION_MODS_TAP_KEY(MOD_RSFT, KC_ENT),
 };
 
 void action_function(keyrecord_t *record, uint8_t id, uint8_t opt) {
